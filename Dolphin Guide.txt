@@ -1,0 +1,24 @@
+You need to do this in order to play Kaizo Mario Galaxy on Dolphin.
+
+1. Open the config menu in Dolphin
+2. Check the box called 'Enable Cheats'
+3. Right click on Kaizo Mario Galaxy
+4. Open the 'Gecko Codes' tab
+5. Click 'Edit Config'
+6. Add this to the bottom of the text file that was just opened:
+
+[Gecko]
+$StarbitReset
+C23B239C 00000007
+3F208091 3B397BE6
+3B397BE6 3B000000
+3F4080F6 3B5A3CF0
+A2FA0000 7F83B800
+409C0008 93190000
+3B200000 B07F0004
+60000000 00000000
+
+7. Save the text file by pressing Ctrl and S at the same time
+8. Enable 'StarbitReset' in the Gecko Codes menu in Dolphin
+
+You can now play this hack on Dolphin!
