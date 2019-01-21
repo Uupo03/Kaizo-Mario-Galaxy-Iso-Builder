@@ -1,8 +1,9 @@
-You need to do this in order to play Kaizo Mario Galaxy on USB Loader GX.
+You need to do this in order to play Kaizo Mario Galaxy on USB Loader GX. (USA only, no need to do this on EUR)
 
-1. Place the xxxxxx.txt file from this folder to a folder called "txtcodes" in the root of your Wii's SD Card
+NOTE: I highly recommend changing the Game ID as well as the TMD ID in the builder,
+this way the Wii will create a separate save file for Kaizo
+
+1. Move the 'txtcodes' folder to your Wii's SD Card
 2. Enable 'Ocarina' in 'Game Load' settings for Kaizo Mario Galaxy
 3. Below the 'Game Load button there should be a button called 'Ocarina', press it
 4. Turn on 'StarbitReset' and press create
-
-You can now play this hack on USB Loader GX!

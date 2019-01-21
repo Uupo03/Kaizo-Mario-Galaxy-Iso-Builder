@@ -2,8 +2,6 @@
 :Builder
 echo Ver. 1.0
 echo /=============================================================\
-echo I    !! Kaizo Mario Galaxy is officially only supported !!    I
-echo I        !! on the USA release of Super Mario Galaxy !!       I
 echo I     Make sure you have WIT (Wiimms ISO Tool) installed!     I
 echo I                   What do you want to do?                   I
 echo I                       1. Build a .iso                       I
@@ -82,12 +80,22 @@ echo I Disc image found, let's build the mod! I
 echo I         Copying modded files...        I
 echo I         This will take a while.        I
 echo \========================================/
-if exist ".\Temp\DATA\" (
-	xcopy ".\Mod Files\*" ".\Temp\DATA\files" /E /Y >nul
-) else (
-	xcopy ".\Mod Files\*" ".\Temp\files" /E /Y >nul
-)
 
+if exist ".\Temp\DATA\" (
+	xcopy ".\mod files\All\*" ".\Temp\DATA\files" /E /Y >nul
+	if exist ".\Temp\DATA\EuEnglish\" (
+		xcopy ".\mod files\PAL\*" ".\Temp\DATA\files" /E /Y >nul
+	) else (
+		xcopy ".\mod files\NTSC\*" ".\Temp\DATA\files" /E /Y >nul
+	)
+) else (
+	xcopy ".\mod files\All\*" ".\Temp\files" /E /Y >nul
+	if exist ".\Temp\EuEnglish\" (
+		xcopy ".\mod files\PAL\*" ".\Temp\files" /E /Y >nul
+	) else (
+		xcopy ".\mod files\NTSC\*" ".\Temp\files" /E /Y >nul
+	)
+)
 CLS
 echo /========================================\
 echo I Disc image found, let's build the mod! I
@@ -129,7 +137,7 @@ echo \==================================/
 SET /P  newGameID=Please enter the new Game ID (e.g. RMGE02 or KAIZ01): 
 if not defined newGameID GOTO :New_GameID
 wit EDIT --id  %newGameID%  ".\%isoFile%" >nul
-ren ".\KAIZ01.txt" "%newGameID%.txt"
+ren ".\txtcodes\RMGE01.txt" "%newGameID%.txt"
 
 CLS
 echo /========================\
