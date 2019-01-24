@@ -21,5 +21,5 @@ Wiimm's ISO Tools (or WIT for short), you can get it here: https://wit.wiimm.de/
 
 Thanks to:
 
-- Laurozz for the mod
+- thegreatwaluigi for the mod
 - The devs of WIT for their awesome tool
